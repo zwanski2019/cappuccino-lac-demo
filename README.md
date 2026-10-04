@@ -28,3 +28,5 @@ The private research, customer review excerpts and commercial proposal are exclu
 ## Accessibility and behavior
 
 Keyboard arrows, swipe gestures, slide controls and pause/play are supported. Autoplay pauses on hover, keyboard interaction, hidden tabs and offscreen state. Reduced-motion preferences disable autoplay and decorative movement. The initial photo scene and full sample menu remain usable without JavaScript. Menu search is accent-insensitive.
+
+The brand uses Cappuccino’s gold emblem, quiet photo tags and decorative watermarks. Body/menu copy is at least 16px, primary controls have at least 44px targets, and layouts support enlarged text. Reduced-transparency and increased-contrast preferences use solid surfaces. Typography and material refinements follow the [Apple-design skill](https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md).
