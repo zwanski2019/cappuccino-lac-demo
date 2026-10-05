@@ -244,3 +244,40 @@ a, button { touch-action: manipulation; }
   .dessert-story { grid-template-columns: minmax(0,1fr); }
   .dessert-story h2 { overflow-wrap: anywhere; }
 }
+
+/* A lightweight gateway into the real Google Earth location. */
+.earth-card { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1.1fr; border: 1px solid #d5bc8a45; border-radius: 1.5rem; background: #19231c; color: #f8f7f2; overflow: hidden; }
+.earth-scene { position: relative; isolation: isolate; min-height: 27rem; display: flex; align-items: center; justify-content: center; background: radial-gradient(ellipse at 50% 50%,#61764a40,transparent 65%); border-right: 1px solid #d5bc8a25; }
+.earth-scene-label { position: absolute; left: 1.75rem; top: 1.75rem; font-size: .75rem; letter-spacing: .14em; color: #d5bc8a; }
+.earth-globe { width: min(85%,21rem); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle at 30% 28%,#60724d80,#243329 52%,#111a15 85%); box-shadow: inset -20px -14px 35px #080d09aa,0 0 75px #d5bc8a0e; transform: rotate(-18deg); transition: transform .8s cubic-bezier(.2,.65,.3,1); }
+.earth-globe svg { display: block; width: 100%; height: 100%; stroke: #d5bc8a40; stroke-width: 1; }
+.earth-globe .earth-flight-path { stroke: #e7cf9e; stroke-width: 2; stroke-dasharray: 5 7; }
+.earth-globe .earth-pin-halo { fill: #d5bc8a28; stroke: #e7cf9e; }
+.earth-globe .earth-pin { fill: #f5dcaa; stroke: #f5dcaa; }
+.earth-card:focus-within .earth-globe { transform: rotate(-12deg) scale(1.035); }
+.earth-destination { position: absolute; left: 50%; top: 62%; transform: translateX(-50%); min-width: max-content; padding: .8rem 1.25rem; background: #142018ed; backdrop-filter: blur(16px); border: 1px solid #d5bc8a60; border-radius: .8rem; color: #f1dfbc; font: 1.25rem/1.4 var(--serif); box-shadow: 0 10px 30px #00000030; }
+.earth-destination small { display: block; padding-left: 1.25rem; font: .8125rem/1.6 var(--sans); color: #e1e5d8; }
+.earth-pin-dot { display: inline-block; width: .45rem; height: .45rem; margin-right: .6rem; border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 4px #d5bc8a20; }
+.earth-scene-note { position: absolute; bottom: 1.75rem; font-size: .875rem; color: #d0d6c8; text-align: center; padding: 0 1rem; }
+.earth-content { padding: clamp(1.5rem,4vw,3.5rem); align-self: center; min-width: 0; }
+.earth-content .section-kicker { color: #d5bc8a; }
+.earth-content h3 { font: 400 clamp(2rem,3vw,3rem)/1.1 var(--serif); letter-spacing: -.035em; }
+.earth-content > p { font-size: 1rem; line-height: 1.8; color: #d1d7cb; margin-top: 1.5rem; max-width: 38ch; }
+.earth-content .button { margin-top: 1.5rem; }
+.earth-content .earth-link-help { font-size: .875rem; margin-top: 1rem; }
+.earth-map-fallback { margin-top: .75rem; color: #f0dfba; border-bottom-color: #d5bc8a75; font-size: .9375rem; }
+.earth-map-fallback:hover { color: white; }
+.earth-card a:focus-visible { outline-color: #f0dfba; }
+@media (hover: hover) { .earth-card:hover .earth-globe { transform: rotate(-12deg) scale(1.035); } }
+@media (max-width: 780px) {
+  .earth-card { grid-template-columns: minmax(0,1fr); }
+  .earth-scene { min-height: 23rem; border-right: 0; border-bottom: 1px solid #d5bc8a25; }
+  .earth-globe { width: min(75%,17rem); }
+  .earth-scene-label { left: 1.25rem; top: 1.25rem; font-size: .6875rem; }
+  .earth-content { padding: 1.75rem 1.5rem; }
+  .earth-content .button { width: 100%; font-size: 1rem; }
+  .earth-content h3 { overflow-wrap: anywhere; }
+  .earth-destination { min-width: 0; width: max-content; max-width: 92%; font-size: 1.125rem; }
+}
+@media (prefers-reduced-motion: reduce) { .earth-globe, .earth-card:hover .earth-globe, .earth-card:focus-within .earth-globe { transform: rotate(-18deg); transition: none; } }
+@media (prefers-reduced-transparency: reduce), (prefers-contrast: more) { .earth-destination { background: #142018; backdrop-filter: none; } }

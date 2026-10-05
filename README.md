@@ -30,3 +30,7 @@ The private research, customer review excerpts and commercial proposal are exclu
 Keyboard arrows, swipe gestures, slide controls and pause/play are supported. Autoplay pauses on hover, keyboard interaction, hidden tabs and offscreen state. Reduced-motion preferences disable autoplay and decorative movement. The initial photo scene and full sample menu remain usable without JavaScript. Menu search is accent-insensitive.
 
 The brand uses Cappuccino’s gold emblem, quiet photo tags and decorative watermarks. Body/menu copy is at least 16px, primary controls have at least 44px targets, and layouts support enlarged text. Reduced-transparency and increased-contrast preferences use solid surfaces. Typography and material refinements follow the [Apple-design skill](https://github.com/emilkowalski/skills/blob/main/skills/apple-design/SKILL.md).
+
+## Google Earth destination
+
+The location card opens Google Earth in a new tab at `36.8331504, 10.239177`, the coordinates of the exact Cappuccino Lac Google Maps listing (CID `13583661458332010024`, plus code `R6MQ+7M7`). Google Earth handles the camera and satellite imagery; the website’s globe is a decorative illustration, not a live map. Google Maps remains available alongside it. This uses a normal link and works without JavaScript, API credentials or a paid mapping integration.
