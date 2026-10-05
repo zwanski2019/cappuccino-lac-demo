@@ -1,5 +1,5 @@
 # Cappuccino Lac — website concept
-
+https://zwanski2019.github.io/cappuccino-lac-demo/
 An unofficial demonstration by Zwanski Tech. This is a presentation concept, not the café’s official website or an ordering service.
 
 A French responsive site with a four-scene animated photo carousel, accessible motion controls, frosted-glass accents, an 18-item sample menu, search/category filters, a dessert feature and verified social/directions links. Built with HTML, CSS and vanilla JavaScript; no build step, analytics or data collection.
